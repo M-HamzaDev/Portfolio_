@@ -1,0 +1,26 @@
+
+> my-app@0.1.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled successfully!
+
+You can now view my-app in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.1.27:3000
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+
+assets by path [1m[32mstatic/media/*.png[39m[22m 11.9 MiB 40 assets
+assets by path [1m[32mstatic/media/*.jpg[39m[22m 41.1 KiB
+  asset [1m[32mstatic/media/alayzone.261a1a5cc6ba580e95d7.jpg[39m[22m 25.9 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [from: src/assets/alayzone.jpg] (auxiliary name: main)
+  asset [1m[32mstatic/media/inthevisual.4dde34313642958777fe.jpg[39m[22m 15.2 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [from: src/assets/inthevisual.jpg] (auxiliary name: main)
+asset [1m[32mstatic/js/bundle.js[39m[22m 6.63 MiB [1m[32m[emitted][39m[22m (name: main) 1 related asset
+asset [1m[32masset-manifest.json[39m[22m 3.72 KiB [1m[32m[emitted][39m[22m
+asset [1m[32mindex.html[39m[22m 1.73 KiB [1m[32m[emitted][39m[22m
+asset [1m[32mstatic/media/circle.ae5f84b3853b9e34aa83cf8dada715c5.svg[39m[22m 437 bytes [1m[32m[emitted][39m[22m (auxiliary name: main)
+cached modules 5.7 MiB (javascript) 11.9 MiB (asset) 28.2 KiB (runtime) [1m[32m[cached][39m[22m 473 modules
+webpack 5.66.0 compiled [1m[32msuccessfully[39m[22m in 3035 ms

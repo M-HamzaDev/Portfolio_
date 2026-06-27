@@ -1,0 +1,59 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@sanity/client": "^2.23.2",
+    "@sanity/image-url": "^1.0.1",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@vercel/analytics": "^1.0.2",
+    "framer-motion": "^6.2.3",
+    "next-themes": "^0.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icon-cloud": "^4.1.4",
+    "react-icons": "^4.3.1",
+    "react-scripts": "5.0.0",
+    "react-tooltip": "^4.2.21",
+    "react-vertical-timeline-component": "^3.6.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "vercel:dev": "vercel dev --analytics",
+    "vercel:prod": "vercel --analytics"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "sass": "^1.66.1"
+  }
+}
