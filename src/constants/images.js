@@ -36,7 +36,7 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import next from '../assets/next.png';
 
-export default {
+const images = {
   email,
   mobile,
   api,
@@ -72,3 +72,5 @@ export default {
   spotify,
   next,
 };
+
+export default images;

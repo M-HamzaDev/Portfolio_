@@ -1,7 +1,6 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import alayzone from '../../assets/alayzone.jpg';
 import fiverr from '../../assets/fiverr (2).png';
 import career from '../../assets/career.jpg';
 import zysoftec from '../../assets/Untitled design (1).png'; // Add appropriate path for ZySoftec logo
