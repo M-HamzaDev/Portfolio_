@@ -5,18 +5,23 @@
 
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { useTheme } from "next-themes";
 import {
     Cloud,
-    fetchSimpleIcons,
     renderSimpleIcon,
 } from "react-icon-cloud";
+import * as SI from "simple-icons";
+
+// Built once at module load — zero network requests, instant
+const slugToIcon = {};
+Object.values(SI).forEach((icon) => {
+    if (icon && icon.slug) slugToIcon[icon.slug] = icon;
+});
 
 export const cloudProps = {
     containerProps: {
         style: {
-            // eslint-disable-next-line indent
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -41,15 +46,14 @@ export const cloudProps = {
 };
 
 export const renderCustomIcon = (icon, theme) => {
-    const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
-    const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
-    const minContrastRatio = theme === "dark" ? 2 : 1.2;
+    const bgHex = theme === "dark" ? "#080510" : "#f3f2ef";
+    const fallbackHex = "#9ca3af"; // uniform silver-grey for all icons
 
     return renderSimpleIcon({
         icon,
         bgHex,
         fallbackHex,
-        minContrastRatio,
+        minContrastRatio: 999, // always use fallbackHex — no brand colors
         size: 42,
         aProps: {
             href: undefined,
@@ -61,23 +65,15 @@ export const renderCustomIcon = (icon, theme) => {
 };
 
 export function IconCloud({ iconSlugs }) {
-    const [data, setData] = useState(null);
     const { theme } = useTheme();
 
-    useEffect(() => {
-        fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
-    }, [iconSlugs]);
+    const renderedIcons = useMemo(() => (
+        iconSlugs
+            .map((slug) => slugToIcon[slug])
+            .filter(Boolean)
+            .map((icon) => renderCustomIcon(icon, theme || "light"))
+    ), [iconSlugs, theme]);
 
-    const renderedIcons = useMemo(() => {
-        if (!data) return null;
-
-        return Object.values(data.simpleIcons).map((icon) => renderCustomIcon(icon, theme || "light"));
-    }, [data, theme]);
-
-    return (
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        <Cloud {...cloudProps}>
-            {renderedIcons}
-        </Cloud>
-    );
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    return <Cloud {...cloudProps}>{renderedIcons}</Cloud>;
 }

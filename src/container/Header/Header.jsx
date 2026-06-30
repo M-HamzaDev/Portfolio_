@@ -24,8 +24,8 @@ import { IconCloud } from '../../components/hero-section';
 const iconSlugs = [
   // MERN Stack
   "react",
-  "nextjs",
-  "nodejs",
+  "nextdotjs",
+  "nodedotjs",
   "express",
   "mongodb",
   "graphql",
@@ -39,7 +39,7 @@ const iconSlugs = [
   "sass",
   "bootstrap",
   "tailwindcss",
-  "material-ui",
+  "materialui",
 
   // Backend & Databases
   "mysql",
@@ -58,15 +58,14 @@ const iconSlugs = [
   "shopify",
   "wordpress",
   "strapi",
-  "sanity",
   "contentful",
 
   // DevOps & Cloud
   "docker",
   "kubernetes",
-  "aws",
+  "amazonaws",
   "googlecloud",
-  "azure",
+  "microsoftazure",
 
   // Version Control & CI/CD
   "github",
@@ -95,15 +94,12 @@ const iconSlugs = [
   "sketch",
 
   // General Purpose Libraries
-  "momentjs",
-  "axios",
-  "chartjs",
+  "chartdotjs",
 
   // Authentication & Security
   "auth0",
   "passport",
-  "jwt",
-  "oauth",
+  "jsonwebtokens",
 
   // Mobile-related libraries
   "expo",
